@@ -1,1 +1,3 @@
-# FirmwareBleed
+# FirmwareBleed: The industry fails to adopt Return Stack Buffer mitigations in SMM.
+
+In the industry, speculative execution mitigations have been discussed for some time, but most people focus on the operating system level in order to adopt them in software stacks. What is happening at firmware level? When it comes to applying mitigations, how does the industry take advantage of them, and who controls their adoption specifically into the firmware? Those are all good questions, but unfortunately no positive news can be shared. The microarchitectural conditions are complicated attack surfaces which are hard to mitigate just in one place. The different layers of the computer stack don’t have knowledge about active mitigations. As an example, the operating system doesn’t obtain the knowledge about active speculative execution mitigations like branch target injection mitigation (retropline) in System Management Mode (SMM) of UEFI firmware. 
